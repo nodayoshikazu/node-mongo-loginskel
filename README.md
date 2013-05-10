@@ -2,17 +2,20 @@
 
 A Node.js and Express app skeleton with only login/logout API. This is a platform to start building a Node.js RESTful app. This app uses mongodb for the persistent storage, Passport.js for authentication and source code is written in Coffeescript. I wrote this because I wanted to learn how to use MongoDB. This should be a good example if you were new to MongoDB just like I was.
 
+I would appreciate you if you could give me your comments and advices to improve this.
+
 
 #Installation
  
+    > npm install
     > make init
     > make build
 
 #Document
 
-Prerequisite
+*Prerequisite*
 
-MongoDB
+*MongoDB database and collections*
 
 In order for this app to work without any customization, you will need to prepare a few mongodb contents.
 
@@ -23,11 +26,11 @@ Please create a Mongo DB "node-mongo-loginskel." Then create a collection "users
 
 Currently there are only 4 APIs in this app.
 
-GET /app/login   returns login form html
-GET /app/logout  returns logout form html
+     GET /app/login   # returns login form html
+     GET /app/logout  # returns logout form html
 
-POST /app/tokens  create an access token and returns it = login
-DELETE /app/tokens  remove the arg token = logout
+     POST /app/tokens  # create an access token and returns it = login
+     DELETE /app/tokens  # remove the arg token = logout
 
 
 
