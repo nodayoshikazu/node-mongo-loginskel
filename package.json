@@ -1,0 +1,36 @@
+{
+  "name": "node-mongo-loginskel",
+  "version": "1.0.0",
+  "description": "A RESTful login skeleton using mongodb, Passport.js and express",
+  "keywords": [
+    "mongodb",
+    "login",
+    "api",
+    "skeleton",
+    "RESTful"
+  ],
+  "author": "Yoshikazu Noda <noda.yoshikazu@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodayoshikazu/node-mongo-loginskel.git"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "should": "~1.2.2",
+    "underscore": "~1.4.4",
+    "coffee-script": "~1.6.2",
+    "passport": "~0.1.16",
+    "mongodb": "~1.3.2",
+    "passport-local": "~0.1.6"
+  },
+  "devDependencies": {
+    "should": ">= 0.0.1"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  }
+}
