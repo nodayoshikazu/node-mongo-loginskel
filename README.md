@@ -11,6 +11,10 @@ I would appreciate you if you could give me your comments and advices to improve
     > make init
     > make build
 
+#Running it
+
+    > node ./lib/app.js
+
 #Document
 
 *Prerequisite*
@@ -19,19 +23,26 @@ I would appreciate you if you could give me your comments and advices to improve
 
 In order for this app to work without any customization, you will need to prepare a few mongodb contents.
 
-Please create a Mongo DB "node-mongo-loginskel." Then create a collection "users." Necessary fields for the users collection are "email" and "password." Also you need to have "tokens" collection to store and manage "access token." The "tokens" collection consists of document with fields "token", "user_id" and "expire." Please refer to src/models/users.coffee and tokens.coffee for the details.
+1) Please create a Mongo DB "node-mongo-loginskel." 
+
+2) Please create a collection "users." Necessary fields for the users collection are "email" and "password." You need to fill some user data in order to test the loging API. No login if there are no users. "Sign-up" API is not provided in this package.
+
+3) Also you need to have "tokens" collection to store and manage "access token." The "tokens" collection consists of document with fields "token", "user_id" and "expire." Actually, this collection is created when the first token data is inserted so this step is not necessary.
+
+Please refer to src/models/users.coffee and tokens.coffee for the details.
 
 
 #API
 
-Currently there are only 4 APIs in this app.
-
-     GET /app/login   # returns login form html
-     GET /app/logout  # returns logout form html
+Currently there are only 2 API in this app.
 
      POST /app/tokens  # create an access token and returns it = login
      DELETE /app/tokens  # remove the arg token = logout
 
+The following two API are used to test the above API.
+
+     GET /app/login   # returns login form html
+     GET /app/logout  # returns logout form html
 
 
 #License 
