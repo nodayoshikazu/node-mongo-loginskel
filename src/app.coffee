@@ -36,7 +36,7 @@ passport.use(new LocalStrategy(  (username, password, done) ->
                 return done(err)
             unless user
                 return done(null, false, message: "Unknown user " + username)   # don't ever 'return' keyword!
-            unless not users.verifyPassword(user, password)
+            unless users.verifyPassword(user, password)
                 return done(null, false, message: "Invalid password")   # don't ever 'return' keyword!
             done null, user
 ))
